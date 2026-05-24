@@ -1,0 +1,19 @@
+{
+  "name": "@delai/ui",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "tamagui": "^1.126.0"
+  },
+  "devDependencies": {
+    "@delai/eslint-config": "workspace:*",
+    "@delai/tsconfig": "workspace:*",
+    "typescript": "^5.8.0"
+  }
+}

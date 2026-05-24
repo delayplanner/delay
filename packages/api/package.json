@@ -1,0 +1,31 @@
+{
+  "name": "@delai/api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./server": "./src/server.ts",
+    "./client": "./src/client.ts",
+    "./router": "./src/router/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@delai/db": "workspace:*",
+    "@delai/core": "workspace:*",
+    "@trpc/server": "^11.0.0",
+    "@trpc/client": "^11.0.0",
+    "@trpc/react-query": "^11.0.0",
+    "@tanstack/react-query": "^5.70.0",
+    "zod": "^3.24.0",
+    "superjson": "^2.2.0"
+  },
+  "devDependencies": {
+    "@delai/eslint-config": "workspace:*",
+    "@delai/tsconfig": "workspace:*",
+    "typescript": "^5.8.0"
+  }
+}

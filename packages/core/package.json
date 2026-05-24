@@ -1,0 +1,27 @@
+{
+  "name": "@delai/core",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./entities/*": "./src/entities/*/index.ts",
+    "./features/*": "./src/features/*/index.ts",
+    "./shared/*": "./src/shared/*/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@delai/db": "workspace:*",
+    "zod": "^3.24.0",
+    "date-fns": "^4.1.0",
+    "nanoid": "^5.1.0"
+  },
+  "devDependencies": {
+    "@delai/eslint-config": "workspace:*",
+    "@delai/tsconfig": "workspace:*",
+    "typescript": "^5.8.0"
+  }
+}

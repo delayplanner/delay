@@ -1,0 +1,38 @@
+{
+  "name": "@delai/web",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .next dist .turbo"
+  },
+  "dependencies": {
+    "@delai/api": "workspace:*",
+    "@delai/core": "workspace:*",
+    "@delai/db": "workspace:*",
+    "@tamagui/next-theme": "^1.126.0",
+    "@tamagui/core": "^1.126.0",
+    "tamagui": "^1.126.0",
+    "@trpc/react-query": "^11.0.0",
+    "@trpc/client": "^11.0.0",
+    "@trpc/server": "^11.0.0",
+    "@tanstack/react-query": "^5.70.0",
+    "next": "^15.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "superjson": "^2.2.0"
+  },
+  "devDependencies": {
+    "@delai/eslint-config": "workspace:*",
+    "@delai/tsconfig": "workspace:*",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.0"
+  }
+}
