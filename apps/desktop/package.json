@@ -2,7 +2,48 @@
   "name": "@delay/desktop",
   "version": "0.0.1",
   "private": true,
+  "main": "main.js",
   "scripts": {
-    "start": "echo 'Desktop app not yet configured'"
+    "dev": "concurrently -k \"pnpm --filter @delay/web dev\" \"pnpm wait-on http://localhost:3000 && electron .\"",
+    "build": "pnpm --filter @delay/web build && electron-builder",
+    "lint": "eslint .",
+    "clean": "rm -rf dist release .turbo"
+  },
+  "dependencies": {
+    "@delay/core": "workspace:*",
+    "@delay/api": "workspace:*",
+    "@delay/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^25.0.0",
+    "concurrently": "^9.0.0",
+    "wait-on": "^8.0.0",
+    "@delay/eslint-config": "workspace:*",
+    "@delay/tsconfig": "workspace:*",
+    "typescript": "^5.8.0"
+  },
+  "build": {
+    "appId": "com.delayplanner.delay",
+    "productName": "Delay",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "../web/.next/**/*",
+      "../web/package.json",
+      "../web/node_modules/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Delay",
+    "slug": "delay",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "scheme": "delay",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.delayplanner.delay"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.delayplanner.delay"
+    },
+    "plugins": ["expo-router"]
+  }
+}

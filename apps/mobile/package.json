@@ -2,7 +2,40 @@
   "name": "@delay/mobile",
   "version": "0.0.1",
   "private": true,
+  "main": "expo-router/entry",
   "scripts": {
-    "start": "echo 'Mobile app not yet configured'"
+    "dev": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .expo dist .turbo"
+  },
+  "dependencies": {
+    "expo": "~52.0.0",
+    "expo-router": "~4.0.0",
+    "expo-status-bar": "~2.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.7",
+    "react-native-web": "~0.19.0",
+    "react-dom": "18.3.1",
+    "@react-navigation/native": "^7.0.0",
+    "react-native-screens": "~4.5.0",
+    "react-native-safe-area-context": "~5.1.0",
+    "@delay/core": "workspace:*",
+    "@delay/api": "workspace:*",
+    "@delay/ui": "workspace:*",
+    "@trpc/client": "^11.0.0",
+    "@trpc/react-query": "^11.0.0",
+    "@tanstack/react-query": "^5.70.0",
+    "superjson": "^2.2.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@types/react": "~18.3.0",
+    "typescript": "^5.8.0",
+    "@delay/eslint-config": "workspace:*",
+    "@delay/tsconfig": "workspace:*"
   }
 }

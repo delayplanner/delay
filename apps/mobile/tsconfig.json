@@ -1,0 +1,12 @@
+{
+  "extends": "@delay/tsconfig/base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "strict": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", ".expo", "dist"]
+}
