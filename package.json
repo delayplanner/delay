@@ -14,9 +14,10 @@
     "db:studio": "pnpm --filter @delay/db studio"
   },
   "devDependencies": {
-    "turbo": "^2.5.0",
-    "prettier": "^3.5.0",
-    "typescript": "^5.8.0"
+    "eslint": "^10.4.0",
+    "turbo": "^2.9.14",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": ">=20",

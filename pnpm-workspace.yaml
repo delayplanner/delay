@@ -6,3 +6,6 @@ allowBuilds:
   esbuild: true
   sharp: true
   electron: true
+  electron-winstaller: true
+  msgpackr-extract: true
+  unrs-resolver: true

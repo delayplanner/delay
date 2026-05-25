@@ -18,21 +18,21 @@
     "@tamagui/next-theme": "^1.126.0",
     "@tamagui/core": "^1.126.0",
     "tamagui": "^1.126.0",
-    "@trpc/react-query": "^11.0.0",
-    "@trpc/client": "^11.0.0",
-    "@trpc/server": "^11.0.0",
-    "@tanstack/react-query": "^5.70.0",
-    "next": "^15.3.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "superjson": "^2.2.0"
+    "@trpc/react-query": "^11.17.0",
+    "@trpc/client": "^11.17.0",
+    "@trpc/server": "^11.17.0",
+    "@tanstack/react-query": "^5.100.14",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "superjson": "^2.2.6"
   },
   "devDependencies": {
     "@delay/eslint-config": "workspace:*",
     "@delay/tsconfig": "workspace:*",
-    "@types/node": "^22.15.0",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.0",
-    "typescript": "^5.8.0"
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.6",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^6.0.3"
   }
 }
