@@ -1,13 +1,7 @@
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
-
-interface DB {
-  query: Record<string, unknown>;
-  insert: Record<string, unknown>;
-  update: Record<string, unknown>;
-  delete: Record<string, unknown>;
-}
+import type { DB } from "@delay/db/client";
 
 export interface Context {
   db: DB;

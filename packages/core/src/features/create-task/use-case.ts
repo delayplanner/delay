@@ -1,5 +1,5 @@
 import type { Task, CreateTaskInput } from "../../entities/task";
-import { createTaskSchema } from "../../entities/task";
+import { createTaskSchema, TaskStatus, TaskPriority } from "../../entities/task";
 import { generateId } from "../../shared/lib";
 
 export interface CreateTaskCommand extends CreateTaskInput {}
@@ -14,8 +14,8 @@ export function createTaskUseCase(
     id: generateId(),
     title: parsed.title,
     description: parsed.description ?? null,
-    status: parsed.status ?? "todo",
-    priority: parsed.priority ?? 0,
+    status: parsed.status ?? TaskStatus.Todo,
+    priority: parsed.priority ?? TaskPriority.Medium,
     listId: parsed.listId ?? null,
     parentId: parsed.parentId ?? null,
     sortOrder: parsed.sortOrder ?? 1000,

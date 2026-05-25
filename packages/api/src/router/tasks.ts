@@ -1,9 +1,9 @@
 import { z } from "zod";
 import { router, protectedProcedure } from "../server";
-import { createTaskSchema, updateTaskSchema } from "@delay/core/entities/task";
+import { createTaskSchema, updateTaskSchema, TaskStatus } from "@delay/core/entities/task";
 import { createTaskUseCase } from "@delay/core/features/create-task";
 import { tasks } from "@delay/db/schema";
-import { desc, eq, and, isNull } from "drizzle-orm";
+import { desc, eq, and, isNull } from "@delay/db/schema";
 
 
 export const tasksRouter = router({
@@ -12,7 +12,7 @@ export const tasksRouter = router({
       z
         .object({
           listId: z.string().optional(),
-          status: z.string().optional(),
+          status: z.nativeEnum(TaskStatus).optional(),
           limit: z.number().default(50),
           offset: z.number().default(0),
         })
@@ -58,9 +58,21 @@ export const tasksRouter = router({
     .mutation(async ({ ctx, input }) => {
       const task = createTaskUseCase(input);
       await ctx.db.insert(tasks).values({
-        ...task,
-        userId: ctx.userId,
+        id: task.id,
+        title: task.title,
+        description: task.description,
+        status: task.status,
+        priority: task.priority,
+        listId: task.listId,
+        parentId: task.parentId,
+        sortOrder: task.sortOrder,
         dueDate: task.dueDate ? new Date(task.dueDate) : null,
+        completedAt: task.completedAt ? new Date(task.completedAt) : null,
+        createdAt: new Date(task.createdAt),
+        updatedAt: new Date(task.updatedAt),
+        deletedAt: task.deletedAt ? new Date(task.deletedAt) : null,
+        syncStatus: task.syncStatus,
+        userId: ctx.userId,
       });
       return task;
     }),

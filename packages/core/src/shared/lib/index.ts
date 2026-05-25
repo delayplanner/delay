@@ -13,7 +13,6 @@ export {
   isToday,
   isTomorrow,
   isYesterday,
-  nanoid,
 } from "date-fns";
 export { nanoid as generateId } from "nanoid";
 

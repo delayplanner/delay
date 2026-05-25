@@ -15,7 +15,11 @@ export const taskStatusEnum = pgEnum("task_status", [
   "cancelled",
 ]);
 
-export const taskPriorityEnum = pgEnum("task_priority", [0, 1, 2, 3, 4]);
+export const taskPriorityEnum = pgEnum("task_priority", ["low", "medium", "high", "urgent"]);
+
+export type TaskStatus = (typeof taskStatusEnum.enumValues)[number];
+export type TaskPriority = (typeof taskPriorityEnum.enumValues)[number];
+export type SyncStatus = (typeof syncStatusEnum.enumValues)[number];
 
 export const syncStatusEnum = pgEnum("sync_status", [
   "synced",
@@ -30,7 +34,7 @@ export const tasks = pgTable(
     title: text("title").notNull(),
     description: text("description"),
     status: taskStatusEnum("status").notNull().default("todo"),
-    priority: taskPriorityEnum("priority").notNull().default("0"),
+    priority: taskPriorityEnum("priority").notNull().default("medium"),
     listId: text("list_id"),
     parentId: text("parent_id"),
     sortOrder: integer("sort_order").notNull().default(1000),

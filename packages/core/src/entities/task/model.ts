@@ -7,11 +7,10 @@ export enum TaskStatus {
 }
 
 export enum TaskPriority {
-  None = 0,
-  Low = 1,
-  Medium = 2,
-  High = 3,
-  Urgent = 4,
+  Low = "low",
+  Medium = "medium",
+  High = "high",
+  Urgent = "urgent",
 }
 
 export interface Task {
