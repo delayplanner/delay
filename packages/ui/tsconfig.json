@@ -1,5 +1,5 @@
 {
-  "extends": "@delai/tsconfig/base.json",
+  "extends": "@delay/tsconfig/base.json",
   "compilerOptions": {
     "jsx": "preserve",
     "outDir": "dist",

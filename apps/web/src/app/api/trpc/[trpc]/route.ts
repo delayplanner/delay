@@ -1,6 +1,6 @@
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
-import { appRouter } from "@delai/api/router";
-import { db } from "@delai/db/client";
+import { appRouter } from "@delay/api/router";
+import { db } from "@delay/db/client";
 
 const handler = (req: Request) =>
   fetchRequestHandler({

@@ -1,5 +1,5 @@
 {
-  "name": "@delai/core",
+  "name": "@delay/core",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -14,14 +14,14 @@
     "clean": "rm -rf dist .turbo"
   },
   "dependencies": {
-    "@delai/db": "workspace:*",
+    "@delay/db": "workspace:*",
     "zod": "^3.24.0",
     "date-fns": "^4.1.0",
     "nanoid": "^5.1.0"
   },
   "devDependencies": {
-    "@delai/eslint-config": "workspace:*",
-    "@delai/tsconfig": "workspace:*",
+    "@delay/eslint-config": "workspace:*",
+    "@delay/tsconfig": "workspace:*",
     "typescript": "^5.8.0"
   }
 }

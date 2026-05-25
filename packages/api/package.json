@@ -1,5 +1,5 @@
 {
-  "name": "@delai/api",
+  "name": "@delay/api",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -14,8 +14,8 @@
     "clean": "rm -rf dist .turbo"
   },
   "dependencies": {
-    "@delai/db": "workspace:*",
-    "@delai/core": "workspace:*",
+    "@delay/db": "workspace:*",
+    "@delay/core": "workspace:*",
     "@trpc/server": "^11.0.0",
     "@trpc/client": "^11.0.0",
     "@trpc/react-query": "^11.0.0",
@@ -24,8 +24,8 @@
     "superjson": "^2.2.0"
   },
   "devDependencies": {
-    "@delai/eslint-config": "workspace:*",
-    "@delai/tsconfig": "workspace:*",
+    "@delay/eslint-config": "workspace:*",
+    "@delay/tsconfig": "workspace:*",
     "typescript": "^5.8.0"
   }
 }

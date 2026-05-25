@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { router, protectedProcedure } from "../server";
-import { createTaskSchema, updateTaskSchema } from "@delai/core/entities/task";
-import { createTaskUseCase } from "@delai/core/features/create-task";
-import { tasks } from "@delai/db/schema";
+import { createTaskSchema, updateTaskSchema } from "@delay/core/entities/task";
+import { createTaskUseCase } from "@delay/core/features/create-task";
+import { tasks } from "@delay/db/schema";
 import { desc, eq, and, isNull } from "drizzle-orm";
 
 

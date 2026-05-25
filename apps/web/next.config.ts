@@ -2,14 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   transpilePackages: [
-    "@delai/core",
-    "@delai/api",
-    "@delai/ui",
+    "@delay/core",
+    "@delay/api",
+    "@delay/ui",
     "@tamagui/core",
     "tamagui",
   ],
   experimental: {
-    optimizePackageImports: ["@delai/core", "@delai/api"],
+    optimizePackageImports: ["@delay/core", "@delay/api"],
   },
 };
 

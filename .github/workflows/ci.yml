@@ -36,4 +36,4 @@ jobs:
           node-version: 22
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter @delai/core test
+      - run: pnpm --filter @delay/core test

@@ -1,5 +1,5 @@
 {
-  "name": "@delai/web",
+  "name": "@delay/web",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -12,9 +12,9 @@
     "clean": "rm -rf .next dist .turbo"
   },
   "dependencies": {
-    "@delai/api": "workspace:*",
-    "@delai/core": "workspace:*",
-    "@delai/db": "workspace:*",
+    "@delay/api": "workspace:*",
+    "@delay/core": "workspace:*",
+    "@delay/db": "workspace:*",
     "@tamagui/next-theme": "^1.126.0",
     "@tamagui/core": "^1.126.0",
     "tamagui": "^1.126.0",
@@ -28,8 +28,8 @@
     "superjson": "^2.2.0"
   },
   "devDependencies": {
-    "@delai/eslint-config": "workspace:*",
-    "@delai/tsconfig": "workspace:*",
+    "@delay/eslint-config": "workspace:*",
+    "@delay/tsconfig": "workspace:*",
     "@types/node": "^22.15.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",

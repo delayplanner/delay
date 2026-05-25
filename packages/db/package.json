@@ -1,5 +1,5 @@
 {
-  "name": "@delai/db",
+  "name": "@delay/db",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "drizzle-kit": "^0.30.0",
-    "@delai/eslint-config": "workspace:*",
-    "@delai/tsconfig": "workspace:*",
+    "@delay/eslint-config": "workspace:*",
+    "@delay/tsconfig": "workspace:*",
     "typescript": "^5.8.0"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@delai/eslint-config",
+  "name": "@delay/eslint-config",
   "private": true,
   "type": "module",
   "exports": {

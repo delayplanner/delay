@@ -1,24 +1,24 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: delai-postgres
+    container_name: delay-postgres
     environment:
-      POSTGRES_USER: delai
-      POSTGRES_PASSWORD: delai_dev
-      POSTGRES_DB: delai
+      POSTGRES_USER: delay
+      POSTGRES_PASSWORD: delay_dev
+      POSTGRES_DB: delay
     ports:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U delai"]
+      test: ["CMD-SHELL", "pg_isready -U delay"]
       interval: 5s
       timeout: 5s
       retries: 5
 
   redis:
     image: redis:7-alpine
-    container_name: delai-redis
+    container_name: delay-redis
     ports:
       - "6379:6379"
     healthcheck:
